@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeSite Web Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">PrimeSite Web Solutions</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="prices.html">Our Packages</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Ready for a High-Performance Website That Converts?</h2>
+            <p>Don't settle for average. It's time to achieve your business goals in 2025.</p>
+            <a href="contact.html" class="btn">Get A Website Now!</a>
+            <p class="reviews">35+ Reviews | Google: 5.0 ★★★★★</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="index.html" class="back-button">Back to Home</a>
+        </div>
+    </footer>
+
+    <!-- Slideshow -->
+    <div class="slideshow-wrapper">
+        <p class="slideshow-title">Some of Our Projects</p>
+        <div class="slideshow-container">
+            <div class="slide fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8p3-vARPXvaof_2oZkpmM-o5ek8Hn00VuhxlTNXVgvvaEYaHcOWSaaOaK3N4Zmrvhroc&usqp=CAU" alt="Project 1">
+            </div>
+            <div class="slide fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvrmLE4uBg9tt_gQTcHHn_zPaviov6PhMvPg&s" alt="Project 2">
+            </div>
+            <div class="slide fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUy_VYaW6UcgmgvPdp-k0GvXvqGKSwcVBjJQ&s" alt="Project 3">
+            </div>
+            <div class="slide fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSEpLRUnx_7CjC9OqaxADM1I2swq9x73Fef96r90TH7DZoJkv7ygYfKYaNeofWiA9fUos&usqp=CAU" alt="Project 4">
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .slideshow-wrapper {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .slideshow-title {
+            margin-bottom: 5px;
+        }
+
+        .slideshow-container {
+            width: 200px;
+            height: 130px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            background: none;
+        }
+
+        .slide {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .fade {
+            animation: fadeEffect 1.5s ease-in-out;
+        }
+
+        @keyframes fadeEffect {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+    </style>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.querySelectorAll(".slide");
+            slides.forEach(slide => slide.style.display = "none");
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+
+</body>
+</html>
