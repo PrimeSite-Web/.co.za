@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrimeSite Web Solutions</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9); /* Slight transparency for smooth scrolling effect */
+            z-index: 1000;
+            padding: 10px 0;
+            transition: background 0.3s ease-in-out;
+        }
+        body {
+            padding-top: 70px; /* Ensures content does not get hidden under the fixed header */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -55,53 +69,6 @@
         </div>
     </div>
 
-    <style>
-        .slideshow-wrapper {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            text-align: center;
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .slideshow-title {
-            margin-bottom: 5px;
-        }
-
-        .slideshow-container {
-            width: 200px;
-            height: 130px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-            background: none;
-        }
-
-        .slide {
-            display: none;
-            width: 100%;
-            height: 100%;
-        }
-
-        .slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .fade {
-            animation: fadeEffect 1.5s ease-in-out;
-        }
-
-        @keyframes fadeEffect {
-            from { opacity: 0.4; }
-            to { opacity: 1; }
-        }
-    </style>
-
     <script>
         let slideIndex = 0;
         showSlides();
@@ -115,6 +82,5 @@
             setTimeout(showSlides, 3000);
         }
     </script>
-
 </body>
 </html>
